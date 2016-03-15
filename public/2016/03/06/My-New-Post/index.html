@@ -1,0 +1,432 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>source Insight unknown command or macro 解决办法 | MagicW&#39;s Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="Magic.W">
+    
+    <meta name="description" content="0x00 前言&amp;gt;在接手一个新项目的时候由于别人的代码对于自己来说太过于陌生，因此使用一个代码组织良好的编辑器来看代码至关重要，毫无例外，SI是比较好的选择，但是老外的东西对中文支持就是不好。大多是情况下的中文乱码可以通过将原文件另存为编码格式为ANSI解决。但是今天碰到了使用backspace">
+    
+    
+    
+    
+    <link rel="alternate" href="/atom.xml" title="MagicW&#39;s Home" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.png">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      <div>
+	
+	<div id="imglogo">
+		<a href="/"><img src="/img/pacman.png" alt="MagicW&#39;s Home" title="MagicW&#39;s Home"/></a>
+	</div>
+	
+	<div id="textlogo">
+		<h1 class="site-name"><a href="/" title="MagicW&#39;s Home">MagicW&#39;s Home</a></h1>
+		<h2 class="blog-motto">一个有DT精神的IT人</h2>
+	</div>
+	<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+		</a></div>
+	<nav class="animated">
+		<ul>
+			
+			<li><a href="/">Home|首页</a></li>
+			
+			<li><a href="/archives">Archives|目录</a></li>
+			
+			<li><a href="/about">About|关于</a></li>
+			
+			<li>
+				
+				<form class="search" action="/search/index.html" method="get" accept-charset="utf-8">
+					<label>Search</label>
+					<input type="text" id="search" class="st-default-search-input" maxlength="20" placeholder="Search" />
+				</form>
+				
+			</li>
+		</ul>
+	</nav>
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/03/06/My-New-Post/" title="source Insight unknown command or macro 解决办法" itemprop="url">source Insight unknown command or macro 解决办法</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://tianzhihen.github.io" title="Magic.W">Magic.W</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2016-03-06T14:37:59.250Z" itemprop="datePublished">2016-03-06</time>
+    更新日期:<time datetime="2016-03-06T14:37:59.250Z" itemprop="dateModified">2016-03-06</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#0x00-前言"><span class="toc-number">1.</span> <span class="toc-text">0x00 前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x01-解决办法"><span class="toc-number">2.</span> <span class="toc-text">0x01 解决办法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">3.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#THE-END"><span class="toc-number">4.</span> <span class="toc-text">THE END</span></a></li></ol>
+		</div>
+		
+		<h3 id="0x00-前言"><a href="#0x00-前言" class="headerlink" title="0x00 前言"></a>0x00 前言</h3><p>&gt;<br>在接手一个新项目的时候由于别人的代码对于自己来说太过于陌生，因此使用一个代码组织良好的编辑器来看代码至关重要，毫无例外，SI是比较好的选择，但是老外的东西对中文支持就是不好。大多是情况下的中文乱码可以通过将原文件另存为编码格式为ANSI解决。但是今天碰到了使用backspace和左右移动光标时的问题（unknown command or macro：XXX）。</p>
+<h3 id="0x01-解决办法"><a href="#0x01-解决办法" class="headerlink" title="0x01 解决办法"></a>0x01 解决办法</h3><p>1.在sourceinsight的安装目录下创建新以下文件：</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>文件名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ShiftCursorLeft.em</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ShiftCursorRight.em</td>
+</tr>
+<tr>
+<td>3</td>
+<td>SuperCursorLeft.em</td>
+</tr>
+<tr>
+<td>4</td>
+<td>SuperCursorRight.em</td>
+</tr>
+<tr>
+<td>5</td>
+<td>superbackspace.em</td>
+</tr>
+<tr>
+<td>6</td>
+<td>superdelete.em</td>
+</tr>
+</tbody>
+</table>
+<p>每个文件的代码如下：<br><strong>ShiftCursorLeft.em 文件</strong><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">macro <span class="title">IsShiftLeftComplexCharacter</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">hwnd = GetCurrentWnd();</span><br><span class="line">hbuf = GetCurrentBuf();</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (hbuf == <span class="number">0</span>)</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">selRec = GetWndSel(hwnd);</span><br><span class="line">pos = selRec.ichFirst;</span><br><span class="line">ln = selRec.lnFirst;</span><br><span class="line">text = GetBufLine(hbuf, ln);</span><br><span class="line">len = <span class="built_in">strlen</span>(text);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(len == <span class="number">0</span> || len &lt; pos)</span><br><span class="line">   <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Msg("@len@;@pos@;");</span></span><br><span class="line"><span class="keyword">if</span>(pos &gt; <span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">   i=pos;</span><br><span class="line">   count=<span class="number">0</span>;</span><br><span class="line">   <span class="keyword">while</span>(AsciiFromChar(text[i<span class="number">-1</span>]) &gt;= <span class="number">160</span>)</span><br><span class="line">   &#123;</span><br><span class="line">    i = i - <span class="number">1</span>;</span><br><span class="line">    count = count+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(i == <span class="number">0</span>)</span><br><span class="line">     <span class="keyword">break</span>;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">if</span>((count/<span class="number">2</span>)*<span class="number">2</span>==count|| count==<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">macro <span class="title">shiftMoveLeft</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">hwnd = GetCurrentWnd();</span><br><span class="line">hbuf = GetCurrentBuf();</span><br><span class="line"><span class="keyword">if</span> (hbuf == <span class="number">0</span>)</span><br><span class="line">        stop;</span><br><span class="line"></span><br><span class="line">ln = GetBufLnCur(hbuf);</span><br><span class="line">ipos = GetWndSelIchFirst(hwnd);</span><br><span class="line">totalLn = GetBufLineCount(hbuf);</span><br><span class="line">text = GetBufLine(hbuf, ln);</span><br><span class="line">selRec = GetWndSel(hwnd);</span><br><span class="line"></span><br><span class="line"><span class="comment">//curLen = GetBufLineLength(hbuf, selRec.lnFirst);</span></span><br><span class="line"><span class="comment">//Msg("@curLen@;@selRec@");</span></span><br><span class="line"><span class="keyword">if</span>(selRec.ichFirst == <span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">   <span class="keyword">if</span>(selRec.lnFirst == <span class="number">0</span>)</span><br><span class="line">    stop;</span><br><span class="line"></span><br><span class="line">   selRec.lnFirst = selRec.lnFirst - <span class="number">1</span>;</span><br><span class="line">   selRec.ichFirst = GetBufLineLength(hbuf, selRec.lnFirst)<span class="number">-1</span>;</span><br><span class="line">   SetWndSel(hwnd, selRec);</span><br><span class="line">   <span class="keyword">if</span>(IsShiftLeftComplexCharacter())</span><br><span class="line">    shiftMoveLeft();</span><br><span class="line">   stop;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">selRec.ichFirst = selRec.ichFirst<span class="number">-1</span>;</span><br><span class="line">SetWndSel(hwnd, selRec);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">macro <span class="title">SuperShiftCursorLeft</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line"><span class="keyword">if</span>(IsComplexCharacter())</span><br><span class="line">   SuperCursorLeft();</span><br><span class="line"></span><br><span class="line">shiftMoveLeft();</span><br><span class="line"><span class="keyword">if</span>(IsShiftLeftComplexCharacter())</span><br><span class="line">   shiftMoveLeft();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>ShiftCursorRight.em 文件</strong><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function">macro <span class="title">IsShiftRightComplexCharacter</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">hwnd = GetCurrentWnd();</span><br><span class="line">hbuf = GetCurrentBuf();</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (hbuf == <span class="number">0</span>)</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">selRec = GetWndSel(hwnd);</span><br><span class="line">pos = selRec.ichLim;</span><br><span class="line">ln = selRec.lnLast;</span><br><span class="line">text = GetBufLine(hbuf, ln);</span><br><span class="line">len = <span class="built_in">strlen</span>(text);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(len == <span class="number">0</span> || len &lt; pos)</span><br><span class="line">   <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Msg("@len@;@pos@;");</span></span><br><span class="line"><span class="keyword">if</span>(pos &gt; <span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">   i=pos;</span><br><span class="line">   count=<span class="number">0</span>;</span><br><span class="line">   <span class="keyword">while</span>(AsciiFromChar(text[i<span class="number">-1</span>]) &gt;= <span class="number">160</span>)</span><br><span class="line">   &#123;</span><br><span class="line">    i = i - <span class="number">1</span>;</span><br><span class="line">    count = count+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(i == <span class="number">0</span>)</span><br><span class="line">     <span class="keyword">break</span>;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">if</span>((count/<span class="number">2</span>)*<span class="number">2</span>==count|| count==<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">macro <span class="title">shiftMoveRight</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">hwnd = GetCurrentWnd();</span><br><span class="line">hbuf = GetCurrentBuf();</span><br><span class="line"><span class="keyword">if</span> (hbuf == <span class="number">0</span>)</span><br><span class="line">        stop;</span><br><span class="line"></span><br><span class="line">ln = GetBufLnCur(hbuf);</span><br><span class="line">ipos = GetWndSelIchFirst(hwnd);</span><br><span class="line">totalLn = GetBufLineCount(hbuf);</span><br><span class="line">text = GetBufLine(hbuf, ln);</span><br><span class="line">selRec = GetWndSel(hwnd);</span><br><span class="line"></span><br><span class="line">curLen = GetBufLineLength(hbuf, selRec.lnLast);</span><br><span class="line"><span class="keyword">if</span>(selRec.ichLim == curLen+<span class="number">1</span> || curLen == <span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">   <span class="keyword">if</span>(selRec.lnLast == totalLn <span class="number">-1</span>)</span><br><span class="line">    stop;</span><br><span class="line"></span><br><span class="line">   selRec.lnLast = selRec.lnLast + <span class="number">1</span>;</span><br><span class="line">   selRec.ichLim = <span class="number">1</span>;</span><br><span class="line">   SetWndSel(hwnd, selRec);</span><br><span class="line">   <span class="keyword">if</span>(IsShiftRightComplexCharacter())</span><br><span class="line">    shiftMoveRight();</span><br><span class="line">   stop;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">selRec.ichLim = selRec.ichLim+<span class="number">1</span>;</span><br><span class="line">SetWndSel(hwnd, selRec);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">macro <span class="title">SuperShiftCursorRight</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line"><span class="keyword">if</span>(IsComplexCharacter())</span><br><span class="line">   SuperCursorRight();</span><br><span class="line"></span><br><span class="line">shiftMoveRight();</span><br><span class="line"><span class="keyword">if</span>(IsShiftRightComplexCharacter())</span><br><span class="line">   shiftMoveRight();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>SuperCursorLeft.em 文件</strong><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">macro <span class="title">IsComplexCharacter</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">hwnd = GetCurrentWnd();</span><br><span class="line">hbuf = GetCurrentBuf();</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (hbuf == <span class="number">0</span>)</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"><span class="comment">//当前位置</span></span><br><span class="line">pos = GetWndSelIchFirst(hwnd);</span><br><span class="line"></span><br><span class="line"><span class="comment">//当前行数</span></span><br><span class="line">ln = GetBufLnCur(hbuf);</span><br><span class="line"></span><br><span class="line"><span class="comment">//得到当前行</span></span><br><span class="line">text = GetBufLine(hbuf, ln);</span><br><span class="line"></span><br><span class="line"><span class="comment">//得到当前行长度</span></span><br><span class="line">len = <span class="built_in">strlen</span>(text);</span><br><span class="line"></span><br><span class="line"><span class="comment">//从头计算汉字字符的个数</span></span><br><span class="line"><span class="keyword">if</span>(pos &gt; <span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">   i=pos;</span><br><span class="line">   count=<span class="number">0</span>;</span><br><span class="line">   <span class="keyword">while</span>(AsciiFromChar(text[i<span class="number">-1</span>]) &gt;= <span class="number">160</span>)</span><br><span class="line">   &#123;</span><br><span class="line">    i = i - <span class="number">1</span>;</span><br><span class="line">    count = count+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(i == <span class="number">0</span>)</span><br><span class="line">     <span class="keyword">break</span>;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">if</span>((count/<span class="number">2</span>)*<span class="number">2</span>==count|| count==<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">macro <span class="title">moveleft</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">hwnd = GetCurrentWnd();</span><br><span class="line">hbuf = GetCurrentBuf();</span><br><span class="line"><span class="keyword">if</span> (hbuf == <span class="number">0</span>)</span><br><span class="line">        stop;   <span class="comment">// empty buffer</span></span><br><span class="line"></span><br><span class="line">ln = GetBufLnCur(hbuf);</span><br><span class="line">ipos = GetWndSelIchFirst(hwnd);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(GetBufSelText(hbuf) != <span class="string">""</span> || (ipos == <span class="number">0</span> &amp;&amp; ln == <span class="number">0</span>))   <span class="comment">// 第0行或者是选中文字,则不移动</span></span><br><span class="line">&#123;</span><br><span class="line">   SetBufIns(hbuf, ln, ipos);</span><br><span class="line">   stop;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(ipos == <span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">   preLine = GetBufLine(hbuf, ln<span class="number">-1</span>);</span><br><span class="line">   SetBufIns(hBuf, ln<span class="number">-1</span>, <span class="built_in">strlen</span>(preLine)<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">   SetBufIns(hBuf, ln, ipos<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">macro <span class="title">SuperCursorLeft</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">moveleft();</span><br><span class="line"><span class="keyword">if</span>(IsComplexCharacter())</span><br><span class="line">   moveleft();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>SuperCursorRight.em 文件</strong><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">macro <span class="title">moveRight</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">hwnd = GetCurrentWnd();</span><br><span class="line">hbuf = GetCurrentBuf();</span><br><span class="line"><span class="keyword">if</span> (hbuf == <span class="number">0</span>)</span><br><span class="line">        stop;   <span class="comment">// empty buffer</span></span><br><span class="line">ln = GetBufLnCur(hbuf);</span><br><span class="line">ipos = GetWndSelIchFirst(hwnd);</span><br><span class="line">totalLn = GetBufLineCount(hbuf);</span><br><span class="line">text = GetBufLine(hbuf, ln);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(GetBufSelText(hbuf) != <span class="string">""</span>)   <span class="comment">//选中文字</span></span><br><span class="line">&#123;</span><br><span class="line">   ipos = GetWndSelIchLim(hwnd);</span><br><span class="line">   ln = GetWndSelLnLast(hwnd);</span><br><span class="line">   SetBufIns(hbuf, ln, ipos);</span><br><span class="line">   stop;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(ipos == <span class="built_in">strlen</span>(text)<span class="number">-1</span> &amp;&amp; ln == totalLn<span class="number">-1</span>) <span class="comment">// 末行</span></span><br><span class="line">   stop;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(ipos == <span class="built_in">strlen</span>(text))</span><br><span class="line">&#123;</span><br><span class="line">   SetBufIns(hBuf, ln+<span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">   SetBufIns(hBuf, ln, ipos+<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">macro <span class="title">SuperCursorRight</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">moveRight();</span><br><span class="line"><span class="keyword">if</span>(IsComplexCharacter()) <span class="comment">// defined in SuperCursorLeft.em</span></span><br><span class="line">   moveRight();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>superbackspace.em 文件</strong><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">macro <span class="title">SuperBackspace</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    hwnd = GetCurrentWnd();</span><br><span class="line">    hbuf = GetCurrentBuf();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (hbuf == <span class="number">0</span>)</span><br><span class="line">        stop;   <span class="comment">// empty buffer</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// get current cursor postion</span></span><br><span class="line">    ipos = GetWndSelIchFirst(hwnd);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// get current line number</span></span><br><span class="line">    ln = GetBufLnCur(hbuf);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> ((GetBufSelText(hbuf) != <span class="string">""</span>) || (GetWndSelLnFirst(hwnd) != GetWndSelLnLast(hwnd))) &#123;</span><br><span class="line">        <span class="comment">// sth. was selected, del selection</span></span><br><span class="line">        SetBufSelText(hbuf, <span class="string">" "</span>); <span class="comment">// stupid &amp; buggy sourceinsight :(</span></span><br><span class="line">        <span class="comment">// del the " "</span></span><br><span class="line">        SuperBackspace(<span class="number">1</span>);</span><br><span class="line">        stop;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// copy current line</span></span><br><span class="line">    text = GetBufLine(hbuf, ln);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// get string length</span></span><br><span class="line">    len = <span class="built_in">strlen</span>(text);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// if the cursor is at the start of line, combine with prev line</span></span><br><span class="line">    <span class="keyword">if</span> (ipos == <span class="number">0</span> || len == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (ln &lt;= <span class="number">0</span>)</span><br><span class="line">            stop;   <span class="comment">// top of file</span></span><br><span class="line">        ln = ln - <span class="number">1</span>;    <span class="comment">// do not use "ln--" for compatibility with older versions</span></span><br><span class="line">        prevline = GetBufLine(hbuf, ln);</span><br><span class="line">        prevlen = <span class="built_in">strlen</span>(prevline);</span><br><span class="line">        <span class="comment">// combine two lines</span></span><br><span class="line">        text = cat(prevline, text);</span><br><span class="line">        <span class="comment">// del two lines</span></span><br><span class="line">        DelBufLine(hbuf, ln);</span><br><span class="line">        DelBufLine(hbuf, ln);</span><br><span class="line">        <span class="comment">// insert the combined one</span></span><br><span class="line">        InsBufLine(hbuf, ln, text);</span><br><span class="line">        <span class="comment">// set the cursor position</span></span><br><span class="line">        SetBufIns(hbuf, ln, prevlen);</span><br><span class="line">        stop;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    num = <span class="number">1</span>; <span class="comment">// del one char</span></span><br><span class="line">    <span class="keyword">if</span> (ipos &gt;= <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="comment">// process Chinese character</span></span><br><span class="line">        i = ipos;</span><br><span class="line">        count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (AsciiFromChar(text[i - <span class="number">1</span>]) &gt;= <span class="number">160</span>) &#123;</span><br><span class="line">            i = i - <span class="number">1</span>;</span><br><span class="line">            count = count + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span>)</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (count &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="comment">// I think it might be a two-byte character</span></span><br><span class="line">            num = <span class="number">2</span>;</span><br><span class="line">            <span class="comment">// This idiot does not support mod and bitwise operators</span></span><br><span class="line">            <span class="keyword">if</span> ((count / <span class="number">2</span> * <span class="number">2</span> != count) &amp;&amp; (ipos &lt; len))</span><br><span class="line">                ipos = ipos + <span class="number">1</span>;    <span class="comment">// adjust cursor position</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// keeping safe</span></span><br><span class="line">    <span class="keyword">if</span> (ipos - num &lt; <span class="number">0</span>)</span><br><span class="line">        num = ipos;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// del char(s)</span></span><br><span class="line">    text = cat(strmid(text, <span class="number">0</span>, ipos - num), strmid(text, ipos, len));</span><br><span class="line">    DelBufLine(hbuf, ln);</span><br><span class="line">    InsBufLine(hbuf, ln, text);</span><br><span class="line">    SetBufIns(hbuf, ln, ipos - num);</span><br><span class="line">    stop;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>superdelete.em文件</strong><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">macro <span class="title">SuperDelete</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    hwnd = GetCurrentWnd();</span><br><span class="line">    hbuf = GetCurrentBuf();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (hbuf == <span class="number">0</span>)</span><br><span class="line">        stop;   <span class="comment">// empty buffer</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// get current cursor postion</span></span><br><span class="line">    ipos = GetWndSelIchFirst(hwnd);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// get current line number</span></span><br><span class="line">    ln = GetBufLnCur(hbuf);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> ((GetBufSelText(hbuf) != <span class="string">""</span>) || (GetWndSelLnFirst(hwnd) != GetWndSelLnLast(hwnd))) &#123;</span><br><span class="line">        <span class="comment">// sth. was selected, del selection</span></span><br><span class="line">        SetBufSelText(hbuf, <span class="string">" "</span>); <span class="comment">// stupid &amp; buggy sourceinsight :(</span></span><br><span class="line">        <span class="comment">// del the " "</span></span><br><span class="line">        SuperDelete(<span class="number">1</span>);</span><br><span class="line">        stop;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// copy current line</span></span><br><span class="line">    text = GetBufLine(hbuf, ln);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// get string length</span></span><br><span class="line">    len = <span class="built_in">strlen</span>(text);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (ipos == len || len == <span class="number">0</span>) &#123;</span><br><span class="line">totalLn = GetBufLineCount (hbuf);</span><br><span class="line">lastText = GetBufLine(hBuf, totalLn<span class="number">-1</span>);</span><br><span class="line">lastLen = <span class="built_in">strlen</span>(lastText);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (ipos == lastLen)<span class="comment">// end of file</span></span><br><span class="line">   stop;</span><br><span class="line"></span><br><span class="line">        ln = ln + <span class="number">1</span>;    <span class="comment">// do not use "ln--" for compatibility with older versions</span></span><br><span class="line">        nextline = GetBufLine(hbuf, ln);</span><br><span class="line">        nextlen = <span class="built_in">strlen</span>(nextline);</span><br><span class="line">        <span class="comment">// combine two lines</span></span><br><span class="line">        text = cat(text, nextline);</span><br><span class="line">        <span class="comment">// del two lines</span></span><br><span class="line">        DelBufLine(hbuf, ln<span class="number">-1</span>);</span><br><span class="line">        DelBufLine(hbuf, ln<span class="number">-1</span>);</span><br><span class="line">        <span class="comment">// insert the combined one</span></span><br><span class="line">        InsBufLine(hbuf, ln<span class="number">-1</span>, text);</span><br><span class="line">        <span class="comment">// set the cursor position</span></span><br><span class="line">        SetBufIns(hbuf, ln<span class="number">-1</span>, len);</span><br><span class="line">        stop;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    num = <span class="number">1</span>; <span class="comment">// del one char</span></span><br><span class="line">    <span class="keyword">if</span> (ipos &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">// process Chinese character</span></span><br><span class="line">        i = ipos;</span><br><span class="line">        count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (AsciiFromChar(text[i<span class="number">-1</span>]) &gt;= <span class="number">160</span>) &#123;</span><br><span class="line">            i = i - <span class="number">1</span>;</span><br><span class="line">            count = count + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span>)</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (count &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="comment">// I think it might be a two-byte character</span></span><br><span class="line">            num = <span class="number">2</span>;</span><br><span class="line">            <span class="comment">// This idiot does not support mod and bitwise operators</span></span><br><span class="line">            <span class="keyword">if</span> (((count / <span class="number">2</span> * <span class="number">2</span> != count) || count == <span class="number">0</span>) &amp;&amp; (ipos &lt; len<span class="number">-1</span>))</span><br><span class="line">                ipos = ipos + <span class="number">1</span>;    <span class="comment">// adjust cursor position</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// keeping safe</span></span><br><span class="line"><span class="keyword">if</span> (ipos - num &lt; <span class="number">0</span>)</span><br><span class="line">            num = ipos;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">i = ipos;</span><br><span class="line">count = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span>(AsciiFromChar(text[i]) &gt;= <span class="number">160</span>) &#123;</span><br><span class="line">     i = i + <span class="number">1</span>;</span><br><span class="line">     count = count + <span class="number">1</span>;</span><br><span class="line">     <span class="keyword">if</span>(i == len<span class="number">-1</span>)</span><br><span class="line">   <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(count &gt; <span class="number">0</span>) &#123;</span><br><span class="line">     num = <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    text = cat(strmid(text, <span class="number">0</span>, ipos), strmid(text, ipos+num, len));</span><br><span class="line">    DelBufLine(hbuf, ln);</span><br><span class="line">    InsBufLine(hbuf, ln, text);</span><br><span class="line">    SetBufIns(hbuf, ln, ipos);</span><br><span class="line">    stop;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>2.将这些文件复制到SI的base工程目录下（base工程在你的SI统一的工程目录下）。<br>3.用SI打开base工程，然后通过Project-&gt;Add and remove project files<br>添加刚刚复制过来的文件<br><img src="http://img.blog.csdn.net/20160301110427351" alt="这里写图片描述"></p>
+<p>然后添加Add all。<br>4.打开options-&gt;key assignments，在command中过滤出 macro开头的（宏）。<br><img src="http://img.blog.csdn.net/20160301111010510" alt="这里写图片描述"></p>
+<p>找到super开头的几个宏，分别绑定对应的按键。如superbackspace -&gt; assign new key 然后按下 键盘退格键（backspace）。完成。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>上述方法将me分别进行创建，方便管理，但是也可以放入一个me文件中。道理都是一样的。</p>
+<h3 id="THE-END"><a href="#THE-END" class="headerlink" title="THE END"></a>THE END</h3>  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/source-Insight/">source Insight</a><a href="/tags/编辑器/">编辑器</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/编辑器/">编辑器</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://tianzhihen.github.io/2016/03/06/My-New-Post/" data-title="source Insight unknown command or macro 解决办法 | MagicW&#39;s Home" data-tsina="15901360610" class="share clearfix">
+  </div>
+
+</div>
+
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/03/06/hello-world/" title="HEXO 入门与实践">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  HEXO 入门与实践</span>
+</a>
+</div>
+
+
+</nav>
+
+	
+<section class="comment">
+	<div class="ds-thread"></div>
+</section>
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#0x00-前言"><span class="toc-number">1.</span> <span class="toc-text">0x00 前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x01-解决办法"><span class="toc-number">2.</span> <span class="toc-text">0x01 解决办法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">3.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#THE-END"><span class="toc-number">4.</span> <span class="toc-text">THE END</span></a></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+			<li><a href="/categories/HEXO/" title="HEXO">HEXO<sup>1</sup></a></li>
+		
+			<li><a href="/categories/编辑器/" title="编辑器">编辑器<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">标签云</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/HEXO-Pacman/" style="font-size: 10px;">HEXO Pacman</a> <a href="/tags/source-Insight/" style="font-size: 10px;">source Insight</a> <a href="/tags/编辑器/" style="font-size: 10px;">编辑器</a>
+    </div>
+  </div>
+
+
+  <div class="music">
+    <p class="asidetitle">音乐列表</p>
+    <ul>
+        <li><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=220 height=52 src="http://music.163.com/outchain/player?type=2&id=31445554&auto=1&height=32"></iframe></li>
+        <li><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=220 height=52 src="http://music.163.com/outchain/player?type=2&id=41665696&auto=0&height=32"></iframe></li>
+    </ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+      <li><a href="http://blog.csdn.net/tianzhihen_wq" target="_blank" title="Hexo">My CSDN</a></li>
+      <li><a href="http://butlmy.github.io/" target="_blank" title="liumengyan">Liumengyan's Blog</a></li>
+
+    </ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+
+
+</div>
+
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span>
+		</span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hi! I&#39;m MagicW in Beijing <br/>
+			I am an embedded engineer!</p>
+	</section>
+	 
+	<div class="social-font clearfix">
+		
+		<a href="http://weibo.com/tianzhihenMCU" target="_blank" title="weibo"></a>
+		
+		
+		
+		<a href="https://github.com/tianzhihen" target="_blank" title="github"></a>
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by nodejs</a> © 2016
+		
+		<a href="http://tianzhihen.github.io" target="_blank" title="Magic.W">Magic.W</a>
+		
+		</p>
+	<script type="text/javascript">
+		(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+					(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+			e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+		})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+		_st('install','rxJ43cAcMyceBRFfKxa7','2.0.0');
+	</script>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"magicw"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+  </body>
+</html>

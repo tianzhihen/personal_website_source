@@ -4,10 +4,10 @@
 
 # Site
 title: MagicW's Home
-subtitle:
-description:
+subtitle: 一个有DT精神的IT人
+description: 一个有DT精神的IT人
 author: Magic.W
-language:
+language:  zh-CN
 timezone:
 
 # URL
@@ -63,11 +63,28 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+
+
+theme: pacman
+
+feed:
+  type: atom ##feed 类型 (atom/rss2)
+  path: atom.xml ##rss 路径
+  limit: 20 ##在 rss 中最多生成的文章数(0显示所有)
+
+sitemap:
+  path: sitemap.xml
+
+baidusitemap:
+  path: baidusitemap.xml
+
+
+social:
+  github: tianzhihen
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: github
+  type: git
   repository: git@github.com:tianzhihen/tianzhihen.github.io.git
   branch: master
